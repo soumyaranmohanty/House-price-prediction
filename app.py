@@ -39,5 +39,16 @@ def call_pred(location,sqft,bath,bhk):
     return print(round(price_pred,2))
 
 
+with open('columns.json', 'r') as f:
+    location = json.load(f)
+location = location['data_columns'][3:]
+print(location)
 
-call_pred("2nd phase judicial layout", 1600, 2, 2)
+location_ip = input("Please enter the location from the given list above : ")
+
+sqft = int(input("Input the area in sqft : "))
+bath = int(input("Input the no of Bathrooms required : "))
+bhk = int(input("Input no of rooms or bhk : "))
+
+call_pred(location_ip,sqft,bath,bhk)
+#call_pred("2nd phase judicial layout", 1600, 2, 2)
