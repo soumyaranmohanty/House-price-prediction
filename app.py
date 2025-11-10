@@ -45,7 +45,6 @@ location = location['data_columns'][3:]
 print(location)
 
 location_ip = input("Please enter the location from the given list above : ")
-
 sqft = int(input("Input the area in sqft : "))
 bath = int(input("Input the no of Bathrooms required : "))
 bhk = int(input("Input no of rooms or bhk : "))
